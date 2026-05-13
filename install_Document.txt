@@ -1,7 +1,7 @@
 
 
 ====================================================================
-  PROJECT STRUCTURE (Important folders only)
+  PROJECT STRUCTURE shubham
 ====================================================================
 
 React-Laravel/

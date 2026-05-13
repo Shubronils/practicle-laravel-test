@@ -3,16 +3,18 @@ import { Link } from 'react-router-dom';
 import { useWishList } from '../context/WishListContext';
 
 const ProductCard = ({ product, home }) => {
+    
     const { toggleItemWishList, list } = useWishList();
 
     const { img, title, sellPrice, brand, category, mrp, discount, rating } = product;
+    console.log(product);
     return (
         <div
             className={`xs:text-xs xs:mx-1 my-2 xs:w-full  xs:h-[250px] md:h-[350px]
                 md:mx-2 flex justify-between flex-col border-1 hover:border-black p-2 relative font-medium`}>
-            <button onClick={() => toggleItemWishList(product._id)} className='z-10 w-4 h-4 absolute'>
+            <button onClick={() => toggleItemWishList(product.id)} className='z-10 w-4 h-4 absolute'>
                 {
-                    list.includes(product._id) ? "❤️" : "🤍"
+                    list.includes(product.id) ? "❤️" : "🤍"
                 }
             </button>
             {/* Best Seller Badge */}
@@ -22,7 +24,7 @@ const ProductCard = ({ product, home }) => {
                 </span>
             )}
 
-            <Link to={`/product-details/${product._id}`} className='h-full' >
+            <Link to={`/product-details/${product.id}`} className='h-full' >
 
                 {/* Img */}
                 <div className='h-4/6 flex items-center justify-center '>

@@ -43,6 +43,7 @@ const ProductDetails = () => {
         const fetchData = async () => {
             try {
                 const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/product/${id}`);
+                
                 if (isMounted) {
                     setProduct(res.data);
                     setLoading(false);

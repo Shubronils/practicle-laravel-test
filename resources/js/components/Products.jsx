@@ -64,7 +64,7 @@ const Products = ({ products, loading, error }) => {
           data
             .slice(0, 30)
             .map((elem) => (
-              <ProductCard product={elem} key={elem._id || elem.id} />
+              <ProductCard product={elem} key={elem.id || elem.id} />
             ))
         ) : (
           <p>No products Available</p>

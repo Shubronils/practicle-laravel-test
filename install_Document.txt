@@ -23,11 +23,12 @@ React-Laravel/
 
 Install Instructions:
 
-git clone https://github.com/given repo 
+git clone https://github.com/Shubronils/practicle-laravel-test.git
 cd Project
 composer install
 copy .env.example .env  and make database and connection.
 php artisan key:generate
 npm install
+npm install react-slick slick-carousel
 npm run build
 php artisan serve
